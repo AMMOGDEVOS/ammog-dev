@@ -1,3 +1,6 @@
+name: push code to another repo
+on: push
+
 stages:
   - test
 
