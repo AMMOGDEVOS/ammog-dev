@@ -1,0 +1,16 @@
+stages:
+  - test
+
+variables:
+  # Define your environment variables here
+  DJANGO_SETTINGS_MODULE: "your_project.settings"  # Replace with your project's settings module
+  PYTHONPATH: "src"  # Replace with the path to your Django project directory
+
+unit_tests:
+  stage: test
+  image: python:3.8  # Use a Docker image with Python 3.8 or any suitable version
+  script:
+    - pip install -r requirements.txt  # Install project dependencies
+    - python manage.py test  # Run Django unit tests
+  only:
+    - branches  # Specify the branch you want to trigger the pipeline on
