@@ -4,7 +4,7 @@ stages:
 variables:
   # Define your environment variables here
   DJANGO_SETTINGS_MODULE: "your_project.settings"  # Replace with your project's settings module
-  PYTHONPATH: "src"  # Replace with the path to your Django project directory
+  PYTHONPATH: dockerFileFolder/  # Replace with the path to your Django project directory
 
 unit_tests:
   stage: test
