@@ -1,6 +1,8 @@
 name: selenium_tutorial
 on:
- workflow_dispatch:
+ push:
+  branch: [main]
+  
  schedule:
    - cron: "*/30 * * * *"
 permissions:
